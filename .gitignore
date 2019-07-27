@@ -2,3 +2,4 @@ venv
 *.swp
 rclone.conf
 *log*
+__pycache__
