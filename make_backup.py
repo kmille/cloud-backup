@@ -116,13 +116,11 @@ def print_used_storage_for_provider(cloud_provider):
 if __name__ == '__main__':
     init()
     do_backup()
-#    cloud_provider = "google-drive"
-#    put_backup_in_da_cloud(cloud_provider)
-#    test_backup(cloud_provider)
-#    exit()
 
     for cloud_provider in list_cloud_provider:
+        cprint(f"Let's go with {cloud_provider}", 'cyan')
         put_backup_in_da_cloud(cloud_provider)
         test_backup(cloud_provider)
+        cprint(f"Done with {cloud_provider}", 'cyan')
     #for cloud_provider in list_cloud_provider:
         #print_used_storage_for_provider(cloud_provider)
